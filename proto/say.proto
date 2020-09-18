@@ -1,0 +1,23 @@
+// version of protobuf
+syntax = "proto3";
+
+// package name for buffer
+package hello;
+
+// service can be executed
+service Say {
+  // function to be called
+  rpc Send (SayRequest) returns (SayResponse);
+}
+
+// args
+message SayRequest {
+  // data type and position
+  string name = 1;
+}
+
+// return value
+message SayResponse {
+  //data type and position
+  string message = 1;
+}
